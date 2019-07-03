@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestProfile xmlns="http://www.specflow.org/schemas/plus/TestProfile/1.5">
+  <Settings projectName="Summatix.Automation.Tests" projectId="{29b5758d-5a4f-4e05-835a-2c182f1af0bf}" />
+  <Execution stopAfterFailures="3" testThreadCount="1" testSchedulingMode="Sequential" />
+  <!-- For collecting by a SpecRun server update and enable the following element. For using the 
+      collected statistics, set testSchedulingMode="Adaptive" attribute on the <Execution> element.
+    <Server serverUrl="http://specrunserver:6365" publishResults="true" />
+  -->
+  <TestAssemblyPaths>
+    <TestAssemblyPath>Summatix.Automation.Tests.dll</TestAssemblyPath>
+  </TestAssemblyPaths>
+	<Report>
+		<Template name="../../../packages/SpecRun.Runner.1.8.2/templates/ReportTemplate.cshtml" outputName="TestSummaryReport.html" />
+	</Report>
+  <DeploymentTransformation>
+    <Steps>
+      <!-- sample config transform to change the connection string-->
+      <!--<ConfigFileTransformation configFile="App.config">
+        <Transformation>
+          <![CDATA[<?xml version="1.0" encoding="utf-8"?>
+							<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+                <connectionStrings>
+                  <add name="MyDatabase" connectionString="Data Source=.;Initial Catalog=MyDatabaseForTesting;Integrated Security=True" 
+                       xdt:Locator="Match(name)" xdt:Transform="SetAttributes(connectionString)" />
+                </connectionStrings>
+							</configuration>
+						]]>
+        </Transformation>
+      </ConfigFileTransformation>-->
+    </Steps>
+  </DeploymentTransformation>
+</TestProfile>
