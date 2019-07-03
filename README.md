@@ -9,4 +9,4 @@
 5. You can suggest improvements to the sample project provided when you are sharing the completed exercise. Clearly mention any assumptions made during your implementation.
 6. Make sure the solution can be built and tests can be executed successfully before you commit.
 
-Good Luck!
+Thank you for taking time to complete the exercise and Good Luck!
